@@ -45,7 +45,7 @@ type
 
 const
   // Placez ici la clé récupérée sur le site Bing Maps Account Center
-  Clef = 'AooizX-mh9EssNYlpeg1zcqK9Pxr1PFDFauNK0SGPuecKSfMn-VB9SI5bSC8kR_1';
+  Clef = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
   Serveur = 'http://dev.virtualearth.net/REST/v1/';
   Imagerie = Serveur + 'Imagery/Map/%s/%s,%s/%d?ms=%d,%d&pp=%s,%s;6&key='
     + Clef;
