@@ -4,8 +4,9 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Math, ComCtrls, ExtCtrls, XPMan, IdBaseComponent,
-  IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, GPS, CPortCtl, Buttons;
+  Dialogs, StdCtrls, Math, JPEG, ExtCtrls, XPMan, IdBaseComponent,
+  IdComponent, IdTCPConnection, IdTCPClient, IdHTTP, GPS, ComCtrls,
+  CPortCtl, Buttons;
 
 type
   TFBingMapsGPS = class(TForm)
@@ -163,13 +164,14 @@ begin
       if CHK_Satellite.Checked then
       begin
         TypeVue := 'AerialWithLabels';
-        Carte   := RepertoireTemporaire() + 'Carte.jpeg';
       end
       else
       begin
         TypeVue := 'Road';
-        Carte   := RepertoireTemporaire() + 'Carte.png';
       end;
+
+      // Ne pas oublier d'ajouter l'unité JPEG
+      Carte   := RepertoireTemporaire() + 'Carte.jpeg';
 
       // Prépare l'adresse de l'image à charger
       Adresse := Format(Imagerie, [TypeVue, LatStr, LongStr,
